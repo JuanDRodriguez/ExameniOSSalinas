@@ -1,0 +1,45 @@
+[
+    {
+       "type" : "camera",
+       "title" : "Cámara",
+       "value" : "",
+       "didSelected" : false,
+    },
+    {
+       "type" : "image",
+       "title" : "Foto",
+       "value" : "",
+       "didSelected" : false,
+    },
+    {
+       "type" : "inputText",
+       "title" : "Nombre completo",
+       "value" : "",
+       "didSelected" : false
+    },
+    {
+       "type" : "inputText",
+       "title" : "Número de teléfonico",
+       "value" : "",
+       "didSelected" : false,
+    },
+    {
+       "type" : "selectInput",
+       "title" : "Fecha de nacimiento",
+       "value" : "",
+       "didSelected" : false,
+    },
+  {
+     "type" : "multiOption",
+     "title" : "Sexo",
+     "value" : "",
+     "didSelected" : false,
+  },
+  {
+     "type" : "multiOption",
+     "title" : "Color favorito",
+     "value" : "",
+     "didSelected" : false,
+  }
+]
+

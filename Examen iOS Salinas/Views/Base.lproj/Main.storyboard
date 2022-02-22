@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fTS-DK-y6f">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="Examen_iOS_Salinas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="ListView" customModule="Examen_iOS_Salinas" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7KD-tA-YMh">
+                                <rect key="frame" x="0.0" y="88" width="414" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtk-uF-L4Q">
+                                <rect key="frame" x="55" y="811" width="304" height="51"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="5Me-LX-bIm"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" titleAlignment="center">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Continuar">
+                                            <attributes>
+                                                <font key="NSFont" size="22" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onClickDone" destination="8bC-Xf-vdC" eventType="touchUpInside" id="eiX-Ml-elQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7KD-tA-YMh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0Br-Yk-Xce"/>
+                            <constraint firstItem="Gtk-uF-L4Q" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CDr-sh-OeX"/>
+                            <constraint firstItem="7KD-tA-YMh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="E9P-fv-kIK"/>
+                            <constraint firstItem="Gtk-uF-L4Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="P4v-1T-gNx"/>
+                            <constraint firstItem="7KD-tA-YMh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ucg-OU-WO6"/>
+                            <constraint firstItem="Gtk-uF-L4Q" firstAttribute="top" secondItem="7KD-tA-YMh" secondAttribute="bottom" constant="8" symbolic="YES" id="WwK-lW-k08"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gtk-uF-L4Q" secondAttribute="trailing" constant="55" id="X10-qI-4P0"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="continueButton" destination="Gtk-uF-L4Q" id="ZCI-nP-you"/>
+                            <outlet property="listTableView" destination="7KD-tA-YMh" id="Pww-dG-s9j"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="0et-bH-sbu"/>
+                    <connections>
+                        <segue destination="fBS-2B-aOH" kind="show" identifier="showDetailList" id="QOz-tE-Bdl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="pY2-cD-F0s" customClass="ListInicializer" customModule="Examen_iOS_Salinas" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="BYZ-38-t0r" id="Itf-VI-X8I"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="784.05797101449286" y="132.58928571428572"/>
+        </scene>
+        <!--Detail List View Controller-->
+        <scene sceneID="5x2-S5-Pgn">
+            <objects>
+                <viewController id="fBS-2B-aOH" customClass="DetailListViewController" customModule="Examen_iOS_Salinas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4lt-UE-Ab7" customClass="DeatilListView" customModule="Examen_iOS_Salinas" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bpW-f8-Nwc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YCc-aP-BOO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YCc-aP-BOO" firstAttribute="trailing" secondItem="bpW-f8-Nwc" secondAttribute="trailing" id="ciH-kB-ytJ"/>
+                            <constraint firstItem="bpW-f8-Nwc" firstAttribute="top" secondItem="YCc-aP-BOO" secondAttribute="top" id="kQC-BM-wke"/>
+                            <constraint firstItem="YCc-aP-BOO" firstAttribute="bottom" secondItem="bpW-f8-Nwc" secondAttribute="bottom" id="ot2-cp-DOc"/>
+                            <constraint firstItem="bpW-f8-Nwc" firstAttribute="leading" secondItem="YCc-aP-BOO" secondAttribute="leading" id="wsi-4T-fpe"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="detailListTable" destination="bpW-f8-Nwc" id="yvD-7O-Zhm"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="k1W-bm-J4e"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IKb-NB-toJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="1rF-2j-p26" customClass="DetailListInicializer" customModule="Examen_iOS_Salinas" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="fBS-2B-aOH" id="4zu-D9-Let"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="1506" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dq2-6z-p9k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fTS-DK-y6f" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4qp-T6-6LA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="AsV-WE-la1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TvB-ZW-O3y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-126.08695652173914" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
